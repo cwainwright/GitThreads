@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct GitThreadsApp: App {
+    @StateObject private var session = Session()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(session)
         }
     }
 }
